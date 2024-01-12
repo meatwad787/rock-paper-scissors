@@ -1,10 +1,10 @@
 Rock paper scissors project
 
+The Computer will randomly return "rock, paper or scissors"
+
 The user will input "rock, paper, or scissors"
 
 The program will respond with the Computer's choice
-
-The Computer will randomly return "rock, paper or scissors"
 
 A message will be displayed a message in the result of "winner", "loser" or "tie"
 
