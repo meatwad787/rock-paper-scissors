@@ -1,6 +1,6 @@
 //Make the computer choose between
 //Rock Paper or Scissors
-function getRandomChoice() {
+function getComputerChoice() {
 //Declare a variable to generate & hold the random number
     let randomNum = Math.floor(Math.random() * 3) + 1;
     
@@ -17,4 +17,4 @@ function getRandomChoice() {
     else if (randomNum === 3) {
         return 'Scissors'
     }
-} console.log(getRandomChoice());
+} console.log(getComputerChoice());
