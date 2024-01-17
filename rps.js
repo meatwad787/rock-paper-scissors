@@ -60,4 +60,5 @@ function play(computerSelection, playerSelection) {
     }
 } 
 //A prompt to receive the Player's choice to be used in the round.
+//This also converts the string to upper case.
  getPlayerChoice = prompt('Enter rock, paper, or scissors').toUpperCase();
