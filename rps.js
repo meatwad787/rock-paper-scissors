@@ -43,7 +43,6 @@ function play(computerSelection, playerSelection) {
         ++computerScore;
         return computerScore;
     }
-
 //If statements to update and return Player's score when they win.
     else if (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
         console.log( 'You win! Paper beats rock.');
