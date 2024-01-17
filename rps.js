@@ -7,15 +7,15 @@ function getComputerChoice() {
 //Use a conditional to return a string when a number is generated 
 //This ties the number 1 to the string "Rock"
     if (randomNum === 1) {
-        return 'Rock'
+        return 'ROCK'
     }
 //This ties the number 2 to the string "Paper"
     else if (randomNum === 2) {
-        return 'Paper'
+        return 'PAPER'
     }
 //This ties the number 3 to the string "Scissors"
     else if (randomNum === 3) {
-        return 'Scissors'
+        return 'SCISSORS'
     }
 } console.log(getComputerChoice());
 
