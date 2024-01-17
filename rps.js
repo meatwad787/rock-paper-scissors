@@ -62,3 +62,13 @@ function play(computerSelection, playerSelection) {
 //A prompt to receive the Player's choice to be used in the round.
 //This also converts the string to upper case.
  getPlayerChoice = prompt('Enter rock, paper, or scissors').toUpperCase();
+
+//Declares the player and computer Selection variables.
+//Assigns the values of the respective Choices to them.
+const playerSelection = getPlayerChoice;
+const computerSelection = getComputerChoice();
+//Logs the values of the variables in the console.
+console.log(playerSelection);
+console.log(computerSelection);
+//Logs the results of the play() function in the console.
+console.log(play(computerSelection, playerSelection));
