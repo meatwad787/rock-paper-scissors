@@ -18,3 +18,41 @@ function getComputerChoice() {
         return 'Scissors'
     }
 } console.log(getComputerChoice());
+
+let playerScore = 0;
+let computerScore = 0;
+
+function play(computerSelection, playerSelection) {
+    
+    if (computerSelection === playerSelection) {
+        console.log( 'Tie');
+    } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
+        console.log( 'You lose... Paper beats rock.');
+        ++computerScore;
+        return computerScore;
+    } else if (computerSelection == 'SCISSORS' && playerSelection == 'PAPER') {
+        console.log( 'You lose... Scissors beats Paper.');
+        ++computerScore;
+        return computerScore;
+    } else if (computerSelection == 'ROCK' && playerSelection == 'SCISSORS') {
+        console.log( 'You lose... Rock beats Scissors.');
+        ++computerScore;
+        return computerScore;
+    }
+    
+    else if (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
+        console.log( 'You win! Paper beats rock.');
+        ++playerScore;
+        return playerScore
+    } else if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
+        console.log( 'You win! Scissors beats Paper.');
+        ++playerScore;
+        return playerScore;
+    } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
+        console.log('You win! Rock beats Scissors.')
+        ++playerScore;
+       return playerScore;
+    }
+} 
+
+ getPlayerChoice = prompt('Enter rock, paper, or scissors').toUpperCase();
