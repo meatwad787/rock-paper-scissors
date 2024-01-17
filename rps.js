@@ -19,13 +19,17 @@ function getComputerChoice() {
     }
 } console.log(getComputerChoice());
 
+//Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
 
+//This function plays 1 round of the game and updates the score accordingly.
+//The parameters are variables that get declared later
 function play(computerSelection, playerSelection) {
-    
+//Logs any tie
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
+//If statements to update and return computer's score when it wins. 
     } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
         console.log( 'You lose... Paper beats rock.');
         ++computerScore;
@@ -39,7 +43,8 @@ function play(computerSelection, playerSelection) {
         ++computerScore;
         return computerScore;
     }
-    
+
+//If statements to update and return Player's score when they win.
     else if (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
         console.log( 'You win! Paper beats rock.');
         ++playerScore;
@@ -54,5 +59,5 @@ function play(computerSelection, playerSelection) {
        return playerScore;
     }
 } 
-
+//A prompt to receive the Player's choice to be used in the round.
  getPlayerChoice = prompt('Enter rock, paper, or scissors').toUpperCase();
