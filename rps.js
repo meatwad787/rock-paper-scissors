@@ -17,7 +17,7 @@ function getComputerChoice() {
     else if (randomNum === 3) {
         return 'SCISSORS'
     }
-} console.log(getComputerChoice());
+} 
 
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
