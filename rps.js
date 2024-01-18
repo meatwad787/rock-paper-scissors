@@ -22,7 +22,18 @@ function getComputerChoice() {
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
-
+function game() {
+//A prompt to receive the Player's choice to be used in the round.
+//This also converts the string to upper case.
+    getPlayerChoice = prompt('Enter Rock, Paper or Scissors').toUpperCase();
+    const playerSelection = getPlayerChoice;
+    const computerSelection = getComputerChoice();
+    
+    play(computerSelection, playerSelection);
+       console.log(playerSelection);
+       console.log(computerSelection);
+       console.log(playerScore, computerScore);
+        }
 //This function plays 1 round of the game and updates the score accordingly.
 //The parameters are variables that get declared later
 function play(computerSelection, playerSelection) {
@@ -58,9 +69,7 @@ function play(computerSelection, playerSelection) {
        return playerScore;
     }
 } 
-//A prompt to receive the Player's choice to be used in the round.
-//This also converts the string to upper case.
- getPlayerChoice = prompt('Enter rock, paper, or scissors').toUpperCase();
+
 
 //Declares the player and computer Selection variables.
 //Assigns the values of the respective Choices to them.
