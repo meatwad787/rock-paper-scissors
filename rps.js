@@ -75,8 +75,17 @@ function play(computerSelection, playerSelection) {
     }
 } 
 
+for (i = 0; i <= 1000; i++){
+    game();
+    
+    if (playerScore === 5 || computerScore === 5){
+        alert('Game Over! ' + 'Final Scores: ' 
+        + 'Player ' + playerScore + ' ' + '|' 
+        + ' '
+        + 'Computer ' + computerScore );
+        break;
+     }
+    }
 
 
 
-//Logs the results of the play() function in the console.
-console.log(play(computerSelection, playerSelection));
