@@ -28,6 +28,7 @@ let computerScore = 0;
 function game() {
 //A prompt to receive the Player's choice to be used in the round.
 //This also converts the string to upper case.
+//Had to put it here because of the order that variables get evaluated/ read.
     getPlayerChoice = prompt('Enter Rock, Paper or Scissors').toUpperCase();
 //Declares the player and computer Selection variables.
 //Assigns the values of the respective Choices to them.     
