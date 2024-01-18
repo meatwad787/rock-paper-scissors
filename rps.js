@@ -81,7 +81,7 @@ for (i = 0; i <= 1000; i++){
     game();
 //This if conditional stops the function from running if either of the scores reach 5.
     if (playerScore === 5){
-//An alert to display a "end of game" message and the final scores. Breaks the loop if condition is true.
+//An alert to display an "end of game" message and the final scores. Breaks the loop if condition is true.
 alert('You Won! ' + 'Final Scores: ' 
 + 'Player ' + playerScore + ' ' + '|' 
 + ' '
