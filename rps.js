@@ -40,6 +40,11 @@ function game() {
        console.log(playerSelection);
        console.log(computerSelection);
        console.log(playerScore, computerScore);
+
+       alert('Player: ' + playerSelection + ' ' 
+       + '| ' + 'Computer: ' + computerSelection + '\n'
+       + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
+       + computerScore); 
         }
 //This function plays 1 round of the game and updates the score accordingly.
 //The parameters are variables that get declared later
