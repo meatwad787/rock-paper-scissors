@@ -23,6 +23,8 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 
+//This function houses the play() function and some variables.
+//It allows the code to run without errors. 
 function game() {
 //A prompt to receive the Player's choice to be used in the round.
 //This also converts the string to upper case.
@@ -74,11 +76,12 @@ function play(computerSelection, playerSelection) {
        return playerScore;
     }
 } 
-
+//This "for" loop runs the game() function one thousand times.
 for (i = 0; i <= 1000; i++){
     game();
-    
+//This if conditional stops the function from running if either of the scores reach 5.
     if (playerScore === 5 || computerScore === 5){
+//An alert to display a Game Over message and the final scores. Breaks the loop if condition is true.
         alert('Game Over! ' + 'Final Scores: ' 
         + 'Player ' + playerScore + ' ' + '|' 
         + ' '
