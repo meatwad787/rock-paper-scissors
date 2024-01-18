@@ -90,13 +90,15 @@ for (i = 0; i <= 1000; i++){
 alert('You Won! ' + 'Final Scores: ' 
 + 'Player ' + playerScore + ' ' + '|' 
 + ' '
-+ 'Computer ' + computerScore );
++ 'Computer ' + computerScore 
++ '\n' + 'Refresh the page to play again.');
 break;
 } else if (computerScore === 5) {
 alert('Game Over! ' + 'Final Scores: ' 
 + 'Player ' + playerScore + ' ' + '|' 
 + ' '
-+ 'Computer ' + computerScore );
++ 'Computer ' + computerScore 
++ '\n' + 'Refresh the page to play again.' );
 break;
      }
     }
