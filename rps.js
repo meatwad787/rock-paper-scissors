@@ -80,13 +80,19 @@ function play(computerSelection, playerSelection) {
 for (i = 0; i <= 1000; i++){
     game();
 //This if conditional stops the function from running if either of the scores reach 5.
-    if (playerScore === 5 || computerScore === 5){
-//An alert to display a Game Over message and the final scores. Breaks the loop if condition is true.
-        alert('Game Over! ' + 'Final Scores: ' 
-        + 'Player ' + playerScore + ' ' + '|' 
-        + ' '
-        + 'Computer ' + computerScore );
-        break;
+    if (playerScore === 5){
+//An alert to display a "end of game" message and the final scores. Breaks the loop if condition is true.
+alert('You Won! ' + 'Final Scores: ' 
++ 'Player ' + playerScore + ' ' + '|' 
++ ' '
++ 'Computer ' + computerScore );
+break;
+} else if (computerScore === 5) {
+alert('Game Over! ' + 'Final Scores: ' 
++ 'Player ' + playerScore + ' ' + '|' 
++ ' '
++ 'Computer ' + computerScore );
+break;
      }
     }
 
