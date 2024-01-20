@@ -80,7 +80,7 @@ function play(computerSelection, playerSelection) {
         console.log('You win! Rock beats Scissors.')
         ++playerScore;
        return playerScore;
-    }
+    } else alert(`Check your spelling. You typed " ${getPlayerChoice} ".`);
 } 
 //This "for" loop runs the game() function one thousand times.
 for (i = 0; i <= 1000; i++){
