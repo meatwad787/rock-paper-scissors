@@ -103,3 +103,4 @@ alert('Game Over! ' + 'Final Scores: '
 break;
      }
     }
+    hi
