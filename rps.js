@@ -29,7 +29,7 @@ const h3 = document.createElement('h3');
 result.appendChild(h3);
 
 //This function houses the play() function and some variables.
-//It allows the code to run without errors. 
+
 // function game() {
 //     play(computerSelection, playerSelection);
 
@@ -39,6 +39,7 @@ result.appendChild(h3);
 //        + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
 //        + computerScore); 
 //         }
+
 //This function plays 1 round of the game and updates the score accordingly.
 function play(computerSelection, playerSelection) {
 //Logs any tie
