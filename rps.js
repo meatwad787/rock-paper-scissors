@@ -54,6 +54,7 @@ const score = document.querySelector('.score')
 //The parameters are variables that get declared later
 function play(computerSelection, playerSelection) {
 //Logs any tie
+score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
         para.textContent = `It\'s a tie! You both chose ${playerSelection}`
