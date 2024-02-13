@@ -25,28 +25,28 @@ let computerScore = 0;
 
 //This function houses the play() function and some variables.
 //It allows the code to run without errors. 
-function game() {
-//A prompt to receive the Player's choice to be used in the round.
-//This also converts the string to upper case.
-//Had to put it here because of the order that variables get evaluated/ read.
-    getPlayerChoice = prompt('Enter Rock, Paper or Scissors').toUpperCase();
-//Declares the player and computer Selection variables.
-//Assigns the values of the respective Choices to them.     
-    const playerSelection = getPlayerChoice;
-    const computerSelection = getComputerChoice();
+// function game() {
+// //A prompt to receive the Player's choice to be used in the round.
+// //This also converts the string to upper case.
+// //Had to put it here because of the order that variables get evaluated/ read.
+//     getPlayerChoice = prompt('Enter Rock, Paper or Scissors').toUpperCase();
+// //Declares the player and computer Selection variables.
+// //Assigns the values of the respective Choices to them.     
+//     const playerSelection = getPlayerChoice;
+//     const computerSelection = getComputerChoice();
     
-    play(computerSelection, playerSelection);
+//     play(computerSelection, playerSelection);
 
-//Logs the values of the variables in the console.   
-       console.log(playerSelection);
-       console.log(computerSelection);
-       console.log(playerScore, computerScore);
+// //Logs the values of the variables in the console.   
+//        console.log(playerSelection);
+//        console.log(computerSelection);
+//        console.log(playerScore, computerScore);
 
-       alert('Player: ' + playerSelection + ' ' 
-       + '| ' + 'Computer: ' + computerSelection + '\n'
-       + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
-       + computerScore); 
-        }
+//        alert('Player: ' + playerSelection + ' ' 
+//        + '| ' + 'Computer: ' + computerSelection + '\n'
+//        + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
+//        + computerScore); 
+//         }
 //This function plays 1 round of the game and updates the score accordingly.
 //The parameters are variables that get declared later
 function play(computerSelection, playerSelection) {
@@ -80,26 +80,44 @@ function play(computerSelection, playerSelection) {
         console.log('You win! Rock beats Scissors.')
         ++playerScore;
        return playerScore;
-    } else alert(`Check your spelling. You typed " ${getPlayerChoice} ".`);
+    } //else alert(`Check your spelling. You typed " ${getPlayerChoice} ".`);
 } 
+const rockBtn = document.querySelector('#rock');
+rockBtn.addEventListener('click', function () {
+    playerSelection = 'ROCK';
+    computerSelection = getComputerChoice();
+    play(computerSelection, playerSelection);
+});
+const paperBtn = document.querySelector('#paper');
+paperBtn.addEventListener('click', function () {
+    playerSelection = 'PAPER';
+    computerSelection = getComputerChoice();
+    play(computerSelection, playerSelection);
+});
+const scissorsBtn = document.querySelector('#scissors');
+scissorsBtn.addEventListener('click', function () {
+    playerSelection = 'SCISSORS';
+    computerSelection = getComputerChoice();
+    play(computerSelection, playerSelection);
+});
 //This "for" loop runs the game() function one thousand times.
-for (i = 0; i <= 1000; i++){
-    game();
-//This if conditional stops the function from running if either of the scores reach 5.
-    if (playerScore === 5){
-//An alert to display an "end of game" message and the final scores. Breaks the loop if condition is true.
-alert('You Won! ' + 'Final Scores: ' 
-+ 'Player ' + playerScore + ' ' + '|' 
-+ ' '
-+ 'Computer ' + computerScore 
-+ '\n' + 'Refresh the page to play again.');
-break;
-} else if (computerScore === 5) {
-alert('Game Over! ' + 'Final Scores: ' 
-+ 'Player ' + playerScore + ' ' + '|' 
-+ ' '
-+ 'Computer ' + computerScore 
-+ '\n' + 'Refresh the page to play again.' );
-break;
-     }
-    }
+// for (i = 0; i <= 1000; i++){
+//     game();
+// //This if conditional stops the function from running if either of the scores reach 5.
+//     if (playerScore === 5){
+// //An alert to display an "end of game" message and the final scores. Breaks the loop if condition is true.
+// alert('You Won! ' + 'Final Scores: ' 
+// + 'Player ' + playerScore + ' ' + '|' 
+// + ' '
+// + 'Computer ' + computerScore 
+// + '\n' + 'Refresh the page to play again.');
+// break;
+// } else if (computerScore === 5) {
+// alert('Game Over! ' + 'Final Scores: ' 
+// + 'Player ' + playerScore + ' ' + '|' 
+// + ' '
+// + 'Computer ' + computerScore 
+// + '\n' + 'Refresh the page to play again.' );
+// break;
+//      }
+//     }
