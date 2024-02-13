@@ -93,7 +93,7 @@ score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         para.textContent = 'You win! Rock beats Scissors.'
         ++playerScore;
        return playerScore;
-    } //else alert(`Check your spelling. You typed " ${getPlayerChoice} ".`);
+    } 
 } 
 const rockBtn = document.querySelector('#rock');
 rockBtn.addEventListener('click', function () {
@@ -113,7 +113,7 @@ scissorsBtn.addEventListener('click', function () {
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
 });
-//This "for" loop runs the game() function one thousand times.
+// This "for" loop runs the game() function one thousand times.
 // for (i = 0; i <= 1000; i++){
 //     game();
 // //This if conditional stops the function from running if either of the scores reach 5.
