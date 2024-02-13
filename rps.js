@@ -24,7 +24,9 @@ let playerScore = 0;
 let computerScore = 0;
 const result = document.querySelector('.result');
 const para = document.querySelector('.para');
-const score = document.querySelector('.score')
+const score = document.querySelector('.score');
+const h3 = document.createElement('h3');
+result.appendChild(h3);
 
 //This function houses the play() function and some variables.
 //It allows the code to run without errors. 
@@ -51,10 +53,8 @@ const score = document.querySelector('.score')
 //        + computerScore); 
 //         }
 //This function plays 1 round of the game and updates the score accordingly.
-//The parameters are variables that get declared later
 function play(computerSelection, playerSelection) {
 //Logs any tie
-score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
         para.textContent = `It\'s a tie! You both chose ${playerSelection}`
@@ -65,16 +65,22 @@ score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
        // const para = document.querySelector('p');
         para.textContent = 'You lose... Paper beats rock.'
         ++computerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
         return computerScore;
     } else if (computerSelection == 'SCISSORS' && playerSelection == 'PAPER') {
         console.log( 'You lose... Scissors beats Paper.');
         para.textContent = 'You lose... Scissors beats Paper.'
         ++computerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
         return computerScore;
     } else if (computerSelection == 'ROCK' && playerSelection == 'SCISSORS') {
         console.log( 'You lose... Rock beats Scissors.');
         para.textContent = 'You lose... Rock beats Scissors.'
         ++computerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
         return computerScore;
     }
 //If statements to update and return Player's score when they win.
@@ -82,37 +88,56 @@ score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         console.log( 'You win! Paper beats rock.');
         para.textContent = 'You win! Paper beats rock.'
         ++playerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
         return playerScore
     } else if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
         console.log( 'You win! Scissors beats Paper.');
         para.textContent = 'You win! Scissors beats Paper.'
         ++playerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
         return playerScore;
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
         console.log('You win! Rock beats Scissors.');
         para.textContent = 'You win! Rock beats Scissors.'
         ++playerScore;
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
+        gameOver(playerScore, computerScore);
        return playerScore;
     } 
+    
 } 
+
+function gameOver(playerScore, computerScore) {
+if (playerScore === 5){
+    h3.textContent = `Winner Player ${playerScore} | Computer ${computerScore}`;
+} else if (computerScore === 5) {
+    h3.textContent = `Loser Player ${playerScore} | Computer ${computerScore}`
+}
+};
 const rockBtn = document.querySelector('#rock');
-rockBtn.addEventListener('click', function () {
+rockBtn.addEventListener('click', function rockClick() {
     playerSelection = 'ROCK';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    
 });
 const paperBtn = document.querySelector('#paper');
-paperBtn.addEventListener('click', function () {
+paperBtn.addEventListener('click', function paperClick() {
     playerSelection = 'PAPER';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    
 });
 const scissorsBtn = document.querySelector('#scissors');
-scissorsBtn.addEventListener('click', function () {
+scissorsBtn.addEventListener('click', function scissorsClick() {
     playerSelection = 'SCISSORS';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    
 });
+
 // This "for" loop runs the game() function one thousand times.
 // for (i = 0; i <= 1000; i++){
 //     game();
