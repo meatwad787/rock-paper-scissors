@@ -45,6 +45,7 @@ function play(computerSelection, playerSelection) {
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
         para.textContent = `It\'s a tie! You both chose ${playerSelection}`
+        score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
 //If statements to update and return computer's score when it wins. 
     } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
         console.log( 'You lose... Paper beats rock.');
