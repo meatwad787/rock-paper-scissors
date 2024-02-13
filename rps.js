@@ -22,6 +22,9 @@ function getComputerChoice() {
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
+const result = document.querySelector('.result');
+const para = document.querySelector('.para');
+const score = document.querySelector('.score')
 
 //This function houses the play() function and some variables.
 //It allows the code to run without errors. 
@@ -53,31 +56,40 @@ function play(computerSelection, playerSelection) {
 //Logs any tie
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
+        para.textContent = `It\'s a tie! You both chose ${playerSelection}`
 //If statements to update and return computer's score when it wins. 
     } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
         console.log( 'You lose... Paper beats rock.');
+       // const result = document.querySelector('.result');
+       // const para = document.querySelector('p');
+        para.textContent = 'You lose... Paper beats rock.'
         ++computerScore;
         return computerScore;
     } else if (computerSelection == 'SCISSORS' && playerSelection == 'PAPER') {
         console.log( 'You lose... Scissors beats Paper.');
+        para.textContent = 'You lose... Scissors beats Paper.'
         ++computerScore;
         return computerScore;
     } else if (computerSelection == 'ROCK' && playerSelection == 'SCISSORS') {
         console.log( 'You lose... Rock beats Scissors.');
+        para.textContent = 'You lose... Rock beats Scissors.'
         ++computerScore;
         return computerScore;
     }
 //If statements to update and return Player's score when they win.
     else if (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
         console.log( 'You win! Paper beats rock.');
+        para.textContent = 'You win! Paper beats rock.'
         ++playerScore;
         return playerScore
     } else if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
         console.log( 'You win! Scissors beats Paper.');
+        para.textContent = 'You win! Scissors beats Paper.'
         ++playerScore;
         return playerScore;
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
-        console.log('You win! Rock beats Scissors.')
+        console.log('You win! Rock beats Scissors.');
+        para.textContent = 'You win! Rock beats Scissors.'
         ++playerScore;
        return playerScore;
     } //else alert(`Check your spelling. You typed " ${getPlayerChoice} ".`);
