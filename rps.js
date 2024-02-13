@@ -31,22 +31,9 @@ result.appendChild(h3);
 //This function houses the play() function and some variables.
 //It allows the code to run without errors. 
 // function game() {
-// //A prompt to receive the Player's choice to be used in the round.
-// //This also converts the string to upper case.
-// //Had to put it here because of the order that variables get evaluated/ read.
-//     getPlayerChoice = prompt('Enter Rock, Paper or Scissors').toUpperCase();
-// //Declares the player and computer Selection variables.
-// //Assigns the values of the respective Choices to them.     
-//     const playerSelection = getPlayerChoice;
-//     const computerSelection = getComputerChoice();
-    
 //     play(computerSelection, playerSelection);
 
 // //Logs the values of the variables in the console.   
-//        console.log(playerSelection);
-//        console.log(computerSelection);
-//        console.log(playerScore, computerScore);
-
 //        alert('Player: ' + playerSelection + ' ' 
 //        + '| ' + 'Computer: ' + computerSelection + '\n'
 //        + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
@@ -61,8 +48,6 @@ function play(computerSelection, playerSelection) {
 //If statements to update and return computer's score when it wins. 
     } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
         console.log( 'You lose... Paper beats rock.');
-       // const result = document.querySelector('.result');
-       // const para = document.querySelector('p');
         para.textContent = 'You lose... Paper beats rock.'
         ++computerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
@@ -114,8 +99,9 @@ if (playerScore === 5){
     h3.textContent = `Winner Player ${playerScore} | Computer ${computerScore}`;
 } else if (computerScore === 5) {
     h3.textContent = `Loser Player ${playerScore} | Computer ${computerScore}`
-}
+}  
 };
+
 const rockBtn = document.querySelector('#rock');
 rockBtn.addEventListener('click', function rockClick() {
     playerSelection = 'ROCK';
@@ -138,6 +124,9 @@ scissorsBtn.addEventListener('click', function scissorsClick() {
     
 });
 
+for (i = 0; i < 100; i++) {
+
+}
 // This "for" loop runs the game() function one thousand times.
 // for (i = 0; i <= 1000; i++){
 //     game();
