@@ -24,6 +24,7 @@ let playerScore = 0;
 let computerScore = 0;
 const result = document.querySelector('.result');
 const para = document.querySelector('.para');
+para.textContent = 'Who Will Win?';
 const score = document.querySelector('.score');
 const h3 = document.createElement('h3');
 result.appendChild(h3);
@@ -43,6 +44,7 @@ result.appendChild(h3);
 //This function plays 1 round of the game and updates the score accordingly.
 function play(computerSelection, playerSelection) {
 //Logs any tie
+    
     if (computerSelection === playerSelection) {
         console.log( 'Tie');
         para.textContent = `It\'s a tie! You both chose ${playerSelection}`
@@ -97,16 +99,14 @@ function play(computerSelection, playerSelection) {
 } 
 
 function gameOver(playerScore, computerScore) {
-if (playerScore === 5){
-    h3.textContent = `Winner Player ${playerScore} | Computer ${computerScore}`;
-    rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
-    
-} else if (computerScore === 5) {
-    h3.textContent = `Loser Player ${playerScore} | Computer ${computerScore}`;
-    rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
-    alert('Game Over!')
-}  
-};
+    if (playerScore === 5){
+        h3.textContent = `Winner! Player ${playerScore} | Computer ${computerScore}`;
+        rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+    } else if (computerScore === 5) {
+        h3.textContent = `Loser! Player ${playerScore} | Computer ${computerScore}`;
+        rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+    }  
+    };
 
 const rockBtn = document.querySelector('#rock');
 rockBtn.addEventListener('click', function rockClick() {
