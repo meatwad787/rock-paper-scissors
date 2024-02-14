@@ -120,7 +120,4 @@ scissorsBtn.addEventListener('click', function scissorsClick() {
     playerSelection = 'SCISSORS';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
-    if (playerScore === 5 || computerScore === 5) {
-        gameOver(playerScore, computerScore);
-    }
 });
