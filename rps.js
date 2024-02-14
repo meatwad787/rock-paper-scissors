@@ -106,6 +106,7 @@ rockBtn.addEventListener('click', function rockClick() {
     playerSelection = 'ROCK';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    playerVis.textContent = '✊'
     gameOver(playerScore, computerScore);
 });
 const paperBtn = document.querySelector('#paper');
@@ -113,6 +114,7 @@ paperBtn.addEventListener('click', function paperClick() {
     playerSelection = 'PAPER';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    playerVis.textContent = '🤚'
     gameOver(playerScore, computerScore);
 });
 const scissorsBtn = document.querySelector('#scissors');
@@ -120,4 +122,5 @@ scissorsBtn.addEventListener('click', function scissorsClick() {
     playerSelection = 'SCISSORS';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
+    playerVis.textContent = '✌️'
 });
