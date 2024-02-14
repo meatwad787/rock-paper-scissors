@@ -15,6 +15,7 @@ body {
     display: flex;
     font-size: 70px;
     margin-top: -50px;
+    gap: 80px;
 }
 
 .choices {
