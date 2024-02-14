@@ -31,7 +31,9 @@ reset.addEventListener('click', function (){
 });
 
 const playerVis = document.querySelector('.playerVis');
+playerVis.textContent = '?';
 const compVis = document.querySelector('.compVis');
+compVis.textContent = '?';
 
 //This function plays 1 round of the game and updates the score accordingly.
 function play(computerSelection, playerSelection) {
