@@ -106,11 +106,11 @@ function play(computerSelection, playerSelection) {
 function gameOver(playerScore, computerScore) {
     reset.disabled = true;
         if (playerScore === 5){
-            h4.textContent = `Winner! Player ${playerScore} | Computer ${computerScore}`;
+            h4.textContent = `Winner!`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
             reset.disabled = false;
         } else if (computerScore === 5) {
-            h4.textContent = `Loser! Player ${playerScore} | Computer ${computerScore}`;
+            h4.textContent = `Loser!`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
             reset.disabled = false;
         }  
