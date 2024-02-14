@@ -27,8 +27,8 @@ const para = document.querySelector('.para');
 para.textContent = 'Who Will Win?';
 const score = document.querySelector('.score');
 score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
-const h3 = document.createElement('h3');
-result.appendChild(h3);
+const h4 = document.createElement('h4');
+result.appendChild(h4);
 reset = document.querySelector('.reset');
 reset.addEventListener('click', function (){
     window.location.reload();
@@ -105,10 +105,10 @@ function play(computerSelection, playerSelection) {
 
 function gameOver(playerScore, computerScore) {
         if (playerScore === 5){
-            h3.textContent = `Winner! Player ${playerScore} | Computer ${computerScore}`;
+            h4.textContent = `Winner! Player ${playerScore} | Computer ${computerScore}`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
         } else if (computerScore === 5) {
-            h3.textContent = `Loser! Player ${playerScore} | Computer ${computerScore}`;
+            h4.textContent = `Loser! Player ${playerScore} | Computer ${computerScore}`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
         }  
     };
