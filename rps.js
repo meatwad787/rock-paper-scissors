@@ -99,8 +99,12 @@ function play(computerSelection, playerSelection) {
 function gameOver(playerScore, computerScore) {
 if (playerScore === 5){
     h3.textContent = `Winner Player ${playerScore} | Computer ${computerScore}`;
+    rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+    
 } else if (computerScore === 5) {
-    h3.textContent = `Loser Player ${playerScore} | Computer ${computerScore}`
+    h3.textContent = `Loser Player ${playerScore} | Computer ${computerScore}`;
+    rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+    alert('Game Over!')
 }  
 };
 
@@ -109,21 +113,23 @@ rockBtn.addEventListener('click', function rockClick() {
     playerSelection = 'ROCK';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
-    
+    gameOver(playerScore, computerScore);
 });
 const paperBtn = document.querySelector('#paper');
 paperBtn.addEventListener('click', function paperClick() {
     playerSelection = 'PAPER';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
-    
+    gameOver(playerScore, computerScore);
 });
 const scissorsBtn = document.querySelector('#scissors');
 scissorsBtn.addEventListener('click', function scissorsClick() {
     playerSelection = 'SCISSORS';
     computerSelection = getComputerChoice();
     play(computerSelection, playerSelection);
-    
+    if (playerScore === 5 || computerScore === 5) {
+        gameOver(playerScore, computerScore);
+    }
 });
 
 for (i = 0; i < 100; i++) {
