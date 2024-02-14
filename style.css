@@ -1,11 +1,14 @@
 
 body { 
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: bisque;
+    background-color: brown;
+    font-size: 50px;
 }
 
 .choices {
@@ -13,8 +16,12 @@ body {
     gap: 6px;
 }
 
+button {
+    background-color: #951f1f;
+}
+
 .btn {
-    font-size: 40px;
+    font-size: 70px;
 }
 
 .result {
@@ -25,6 +32,8 @@ body {
 }
 
 .reset {
-    width: 70px;
-    height: 40px;
+    width: 120px;
+    height: 70px;
+    font-size: 33px;
+    color: bisque;
 }
