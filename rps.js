@@ -57,21 +57,21 @@ function play(computerSelection, playerSelection) {
 //If statements to update and return computer's score when it wins. 
     } else if (computerSelection == 'PAPER' && playerSelection == 'ROCK'){
         console.log( 'You lose... Paper beats rock.');
-        para.textContent = 'You lose... Paper beats rock.'
+        para.textContent = 'Aww... Paper beats rock.'
         ++computerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
         return computerScore;
     } else if (computerSelection == 'SCISSORS' && playerSelection == 'PAPER') {
         console.log( 'You lose... Scissors beats Paper.');
-        para.textContent = 'You lose... Scissors beats Paper.'
+        para.textContent = 'Aww... Scissors beats Paper.'
         ++computerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
         return computerScore;
     } else if (computerSelection == 'ROCK' && playerSelection == 'SCISSORS') {
         console.log( 'You lose... Rock beats Scissors.');
-        para.textContent = 'You lose... Rock beats Scissors.'
+        para.textContent = 'Aww... Rock beats Scissors.'
         ++computerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
@@ -80,21 +80,21 @@ function play(computerSelection, playerSelection) {
 //If statements to update and return Player's score when they win.
     else if (playerSelection == 'PAPER' && computerSelection == 'ROCK'){
         console.log( 'You win! Paper beats rock.');
-        para.textContent = 'You win! Paper beats rock.'
+        para.textContent = 'Nice! Paper beats rock.'
         ++playerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
         return playerScore
     } else if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
         console.log( 'You win! Scissors beats Paper.');
-        para.textContent = 'You win! Scissors beats Paper.'
+        para.textContent = 'Nice! Scissors beats Paper.'
         ++playerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
         return playerScore;
     } else if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
         console.log('You win! Rock beats Scissors.');
-        para.textContent = 'You win! Rock beats Scissors.'
+        para.textContent = 'Nice! Rock beats Scissors.'
         ++playerScore;
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
@@ -104,12 +104,15 @@ function play(computerSelection, playerSelection) {
 } 
 
 function gameOver(playerScore, computerScore) {
+    reset.disabled = true;
         if (playerScore === 5){
             h4.textContent = `Winner! Player ${playerScore} | Computer ${computerScore}`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+            reset.disabled = false;
         } else if (computerScore === 5) {
             h4.textContent = `Loser! Player ${playerScore} | Computer ${computerScore}`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+            reset.disabled = false;
         }  
     };
 
