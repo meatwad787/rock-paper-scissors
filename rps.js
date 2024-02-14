@@ -25,6 +25,7 @@ para.textContent = 'Who Will Win?';
 const score = document.querySelector('.score');
 score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
 const h4 = document.createElement('h4');
+h4.textContent = 'First to 5'
 outcome.appendChild(h4);
 reset = document.querySelector('.reset');
 reset.addEventListener('click', function (){
