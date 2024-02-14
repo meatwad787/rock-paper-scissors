@@ -8,11 +8,13 @@ body {
     justify-content: center;
     color: bisque;
     background-color: brown;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .visuals {
     display: flex;
+    font-size: 70px;
+    margin-top: -50px;
 }
 
 .choices {
