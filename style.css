@@ -11,6 +11,10 @@ body {
     font-size: 40px;
 }
 
+.outcome, .round-result {
+    margin-top: -45px;
+}
+
 .visuals {
     display: flex;
     font-size: 70px;

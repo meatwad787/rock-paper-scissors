@@ -17,6 +17,7 @@ function getComputerChoice() {
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
+const outcome = document.querySelector('.outcome');
 const roundResult = document.querySelector('.round-result')
 const result = document.querySelector('.result');
 const para = document.querySelector('.para');
@@ -24,7 +25,7 @@ para.textContent = 'Who Will Win?';
 const score = document.querySelector('.score');
 score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
 const h4 = document.createElement('h4');
-result.appendChild(h4);
+outcome.appendChild(h4);
 reset = document.querySelector('.reset');
 reset.addEventListener('click', function (){
     window.location.reload();
