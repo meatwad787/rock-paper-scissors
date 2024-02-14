@@ -26,6 +26,7 @@ const result = document.querySelector('.result');
 const para = document.querySelector('.para');
 para.textContent = 'Who Will Win?';
 const score = document.querySelector('.score');
+score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
 const h3 = document.createElement('h3');
 result.appendChild(h3);
 reset = document.querySelector('.reset');
