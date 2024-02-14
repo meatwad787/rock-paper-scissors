@@ -17,6 +17,7 @@ function getComputerChoice() {
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
+const roundResult = document.querySelector('.round-result')
 const result = document.querySelector('.result');
 const para = document.querySelector('.para');
 para.textContent = 'Who Will Win?';
