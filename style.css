@@ -14,7 +14,7 @@ body {
 .visuals {
     display: flex;
     font-size: 70px;
-    margin-top: -50px;
+    margin-top: -75px;
     gap: 80px;
 }
 
