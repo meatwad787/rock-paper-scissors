@@ -11,6 +11,10 @@ body {
     font-size: 50px;
 }
 
+.visuals {
+    display: flex;
+}
+
 .choices {
     display: flex;
     gap: 6px;
