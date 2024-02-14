@@ -1,24 +1,19 @@
 //Make the computer choose between
 //Rock Paper or Scissors
 function getComputerChoice() {
-//Declare a variable to generate & hold the random number
     let randomNum = Math.floor(Math.random() * 3) + 1;
     
-//Use a conditional to return a string when a number is generated 
-//This ties the number 1 to the string "Rock"
     if (randomNum === 1) {
+        compVis.textContent = '✊'
         return 'ROCK'
-    }
-//This ties the number 2 to the string "Paper"
-    else if (randomNum === 2) {
+    } else if (randomNum === 2) {
+        compVis.textContent = '🤚'
         return 'PAPER'
-    }
-//This ties the number 3 to the string "Scissors"
-    else if (randomNum === 3) {
+    } else if (randomNum === 3) {
+        compVis.textContent = '✌️'
         return 'SCISSORS'
     }
 } 
-
 //Declares and sets the scores to zero at the start.
 let playerScore = 0;
 let computerScore = 0;
@@ -32,19 +27,10 @@ result.appendChild(h4);
 reset = document.querySelector('.reset');
 reset.addEventListener('click', function (){
     window.location.reload();
-})
+});
 
-//This function houses the play() function and some variables.
-
-// function game() {
-//     play(computerSelection, playerSelection);
-
-// //Logs the values of the variables in the console.   
-//        alert('Player: ' + playerSelection + ' ' 
-//        + '| ' + 'Computer: ' + computerSelection + '\n'
-//        + 'Player Score: ' + playerScore + ' | ' + 'Computer Score: '
-//        + computerScore); 
-//         }
+const playerVis = document.querySelector('.playerVis');
+const compVis = document.querySelector('.compVis');
 
 //This function plays 1 round of the game and updates the score accordingly.
 function play(computerSelection, playerSelection) {
@@ -99,8 +85,7 @@ function play(computerSelection, playerSelection) {
         score.textContent = `Scores: Player ${playerScore} | Computer ${computerScore}`
         gameOver(playerScore, computerScore);
        return playerScore;
-    } 
-    
+    }  
 } 
 
 function gameOver(playerScore, computerScore) {
@@ -139,28 +124,3 @@ scissorsBtn.addEventListener('click', function scissorsClick() {
         gameOver(playerScore, computerScore);
     }
 });
-
-for (i = 0; i < 100; i++) {
-
-}
-// This "for" loop runs the game() function one thousand times.
-// for (i = 0; i <= 1000; i++){
-//     game();
-// //This if conditional stops the function from running if either of the scores reach 5.
-//     if (playerScore === 5){
-// //An alert to display an "end of game" message and the final scores. Breaks the loop if condition is true.
-// alert('You Won! ' + 'Final Scores: ' 
-// + 'Player ' + playerScore + ' ' + '|' 
-// + ' '
-// + 'Computer ' + computerScore 
-// + '\n' + 'Refresh the page to play again.');
-// break;
-// } else if (computerScore === 5) {
-// alert('Game Over! ' + 'Final Scores: ' 
-// + 'Player ' + playerScore + ' ' + '|' 
-// + ' '
-// + 'Computer ' + computerScore 
-// + '\n' + 'Refresh the page to play again.' );
-// break;
-//      }
-//     }
