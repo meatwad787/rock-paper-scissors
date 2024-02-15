@@ -95,6 +95,11 @@ function play(computerSelection, playerSelection) {
 
 function gameOver(playerScore, computerScore) {
     reset.disabled = true;
+    // if (reset.disabled = true) {
+    //     reset.textContent = ''    
+    // } else if (reset.disabled = false) {
+    //     reset.textContent = 'Reset'
+    // }
         if (playerScore === 5){
             h4.textContent = `Winner!`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
