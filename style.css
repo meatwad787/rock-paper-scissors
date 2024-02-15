@@ -1,6 +1,5 @@
 
 body { 
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,4 +45,10 @@ button {
     height: 70px;
     font-size: 33px;
     color: bisque;
+}
+
+.footer {
+    margin-top: -378px;
+    font-size: 61px;
+    color: #00000033;
 }
