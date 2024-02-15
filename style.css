@@ -46,7 +46,20 @@ button {
     font-size: 33px;
     color: bisque;
     box-shadow: 8px 7px 11px 0px black;
+    animation-name: reset;
+    animation-duration: 1900ms;
+    animation-iteration-count: infinite;
 }
+
+@keyframes reset {
+    0% {color:red }
+    14% { color: orange; }
+    28% {color: yellow;}
+    42% { color: green; }
+    56% {color: blue;}
+    70% { color: indigo;}
+    84% {color: violet;}
+} 
 
 .footer {
     margin-top: -378px;
