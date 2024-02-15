@@ -95,19 +95,18 @@ function play(computerSelection, playerSelection) {
 
 function gameOver(playerScore, computerScore) {
     reset.disabled = true;
-    // if (reset.disabled = true) {
-    //     reset.textContent = ''    
-    // } else if (reset.disabled = false) {
-    //     reset.textContent = 'Reset'
-    // }
+    reset.style.opacity = '0.2';
         if (playerScore === 5){
             h4.textContent = `Winner!`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
             reset.disabled = false;
+            reset.style.opacity = '1';
         } else if (computerScore === 5) {
             h4.textContent = `Loser!`;
             rockBtn.disabled = true;    paperBtn.disabled = true;   scissorsBtn.disabled = true;
+            reset.style.opacity = '1';
             reset.disabled = false;
+            
         }  
     };
 
