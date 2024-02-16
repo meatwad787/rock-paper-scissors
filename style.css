@@ -68,10 +68,13 @@ button {
     font-size: 15px;
 }
 
-@media (max-width: 550px) {
+/* @media (max-width: 550px) {
     body {
       font-size: 18px;
       margin-top: 80px;
+    }
+    button {
+        font-size: 35px;
     }
 }
 
@@ -79,4 +82,4 @@ button {
     body {
         font-size: 18px;
     }
-}
+} */
