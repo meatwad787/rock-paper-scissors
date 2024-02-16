@@ -70,13 +70,13 @@ button {
 
 @media (max-width: 550px) {
     body {
-      font-size: 35px;
+      font-size: 18px;
       margin-top: 40px;
     }
 }
 
 @media (max-height: 900px) {
     body {
-        font-size: 35px;
+        font-size: 18px;
     }
 }
