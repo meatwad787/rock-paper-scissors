@@ -8,6 +8,7 @@ body {
     color: bisque;
     background-color: brown;
     font-size: 40px;
+    gap: 8px;
 }
 
 .outcome, .round-result {
