@@ -1,4 +1,6 @@
 body { 
+    width: 100dvw;
+    width: 100dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
