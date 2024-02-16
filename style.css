@@ -75,7 +75,7 @@ button {
     }
 }
 
-@media (max-height: 900px) {
+@media (max-height: 700px) {
     body {
         font-size: 18px;
     }
