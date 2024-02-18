@@ -55,7 +55,7 @@ button {
     font-size: 33px;
     color: bisque;
     box-shadow: 8px 7px 11px 0px black;
-    animation-name: reset;
+    animation-name: reset, bounce;
     animation-duration: 1900ms;
     animation-iteration-count: infinite;
 }
@@ -69,6 +69,10 @@ button {
     70% { color: indigo;}
     84% {color: violet;}
 } 
+
+@keyframes bounce {
+    from {scale: 0.7}
+}
 
 .footer {
     font-size: 15px;
@@ -99,6 +103,12 @@ button {
 }
 
 @media (min-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
     .container {
         width: 100%;
     }
