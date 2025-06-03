@@ -91,6 +91,9 @@ button {
 }
 
 @media (max-width: 375px) {
+    .para {
+        font-size: 75%;
+    }
     .score {
     font-size: 1.4rem;
     }
