@@ -78,75 +78,39 @@ button {
     font-size: 15px;
 }
 
-@media (max-width: 260px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        font-size: 35px;
+@media (max-width: 494px) {
+    .score {
+       font-size: 1.6rem;
     }
 }
 
-@media (max-width:300px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        font-size: 35px;
+@media (max-width: 398px) {
+    .score {
+        font-size: 1.5rem;
     }
 }
 
-@media (max-width: 400px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        font-size: 35px;
+@media (max-width: 375px) {
+    .score {
+    font-size: 1.4rem;
     }
 }
 
-@media (max-width: 600px) {
-  
-    button {
-        font-size: 35px;
+@media (max-width: 345px) {
+    .para {
+        font-size: 80%;
     }
-    .container {
-        width: 100%;
+    .playerVis, .compVis {
+        transform: scale(.8);
     }
-}
-
-@media (min-width: 601px) {
-    .container {
-        width: 100%;
+    .choices {
+        gap: 1px;
     }
-    button {
-        font-size: 35px;
+    .btn {
+    transform: scale(.8);
+    font-size: 2.9rem;
     }
-}
-
-@media (min-width: 768px) {
-    .container {
-        width: 100%;
-    } 
-    button {
-        font-size: 35px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        font-size: 35px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 100%;
-    }
-    button {
-        font-size: 35px;
+    .score {
+        font-size: 1.1rem;
     }
 }
