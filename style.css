@@ -36,6 +36,11 @@ body {
 button {
     background-color: #951f1f;
     box-shadow: 8px 7px 11px 0px;
+    border: transparent;
+    border-radius: 10%;
+    margin: 0% 1% 0% 1%;
+} button:hover {
+    background-color: #d00000;
 }
 
 .btn {
